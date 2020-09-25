@@ -1,18 +1,23 @@
 {
     "version": 2,
     "name": "MakerGear Ultra One",
-    "inherits": "_____",
+    "inherits": "fdmprinter",
     "metadata": {
         "visible": true,
         "author": "MakerGear",
         "manufacturer": "MakerGear",
         "weight": 4,
         "file_formats": "text/x-gcode",
-        "platform": "_____",
+        "platform": "makergear_ultraone",
         "has_materials": true,
+        "has_variants": true,
         "has_machine_quality": true,
+        "variants_name": "Nozzle Size",
+
+        "preferred_variant_name": "makergear_ultraone_0.5",
+        "preferred_quality_type": "standard",
+        "preferred_material": "generic_pla",
         "quality_definition": "makergear",
-        "exclude_materials": "____",
         "machine_extruder_trains":
         {
             "0": "makergear_ultraone_1st",
