@@ -27,55 +27,88 @@
     },
 
     "overrides": {
-      "machine_name": { "default_value": "MakerGear Ultra One" },
-      
-      "machine_heated_bed": {
-            "default_value": true
-        },
-        "machine_width": {
-            "default_value": 406
-        },
-        "machine_height": {
-            "default_value": 330
-        },
-        "machine_depth": {
-            "default_value": 356
-        },
-        "machine_center_is_zero": {
-            "default_value": false
-        },
-        "machine_head_with_fans_polygon":
-        {
+        "machine_name": { "default_value": "MakerGear Ultra One" },
+        "machine_heated_bed": { "default_value": true },
+        "machine_width": { "default_value": 406 },
+        "machine_height": { "default_value": 330 },
+        "machine_depth": { "default_value": 356 },
+        "machine_center_is_zero": { "default_value": false },
+        "machine_head_with_fans_polygon": {
             "default_value": [
                 [ 0, 0 ],
                 [ 0, 0 ],
                 [ 0, 0 ],
-                [ 0, 0 ]
-            ]
+                [ 0, 0 ] ] },
+
+        "gantry_height": { "value": "5" },
+        "machine_use_extruder_offset_to_offset_coords": { "default_value": true },
+        "machine_gcode_flavor": { "default_value": "RepRap (Marlin/Sprinter)" },
+        "machine_start_gcode": { "default_value": "" },
+        "machine_end_gcode": { "default_value": "" },
+        "machine_extruder_count": { "default_value": 2 },
+        "machine_max_feedrate_x": { "default_value": 18000 },
+        "machine_max_feedrate_y": { "default_value": 18000 },
+        "machine_max_feedrate_z": { "default_value": 1200 },
+        "machine_acceleration": { "default_value": 1200 },
+        "extruder_prime_pos_abs": { "default_value": true },
+        "prime_blob_enable": { "enabled": true, "default_value": false },
+
+        "speed_travel":
+        {
+            "maximum_value": "150",
+            "value": "150"
         },
-        "gantry_height": {
-            "value": "5"
-        },
-        "machine_use_extruder_offset_to_offset_coords": {
-            "default_value": true
-        },
-        "machine_gcode_flavor": {
-            "default_value": "RepRap (Marlin/Sprinter)"
-        },
-        "machine_start_gcode": {
-            "default_value": ""
-        },
-        "machine_end_gcode": {
-            "default_value": ""
-        },
-        "machine_extruder_count": {
-            "default_value": 2
-        },
-        "prime_tower_position_x": {
-            "value": ""
-        },
-        "prime_tower_position_y": {
-            "value": ""
-        }
+
+        "acceleration_enabled": { "value": "True" },
+        "acceleration_layer_0": { "value": "acceleration_topbottom" },
+        "acceleration_prime_tower": { "value": "math.ceil(acceleration_print * 2000 / 4000)" },
+        "acceleration_print": { "value": "2000" },
+        "acceleration_support": { "value": "math.ceil(acceleration_print * 2000 / 4000)" },
+        "acceleration_support_interface": { "value": "acceleration_topbottom" },
+        "acceleration_topbottom": { "value": "math.ceil(acceleration_print * 500 / 4000)" },
+        "acceleration_wall": { "value": "math.ceil(acceleration_print * 1000 / 4000)" },
+        "acceleration_wall_0": { "value": "math.ceil(acceleration_wall * 500 / 1000)" },
+
+        "brim_width": { "value": "2" },
+        "support_brim_enable": { "value": "True" },
+        "adhesion_type": { "default_value": "skirt" },
+        "cool_fan_full_at_height": { "value": "layer_height_0 + 4 * layer_height" },
+        "cool_fan_speed": { "value": "100" },
+        "cool_fan_speed_max": { "value": "100" },
+        "cool_min_speed": { "value": "0" },
+        "infill_line_width": { "value": "round(line_width * 0.5 / 0.35, 2)" },
+        "infill_overlap": { "value": "20" },
+        "infill_pattern": { "value": "'triangles'" },
+        "infill_wipe_dist": { "value": "0" },
+
+
+        "layer_height_0": { "value": "round(machine_nozzle_size * 90 * .01)" },
+        "layer_start_x": { "value": "sum(extruderValues('machine_extruder_start_pos_x')) / len(extruderValues('machine_extruder_start_pos_x'))" },
+        "layer_start_y": { "value": "sum(extruderValues('machine_extruder_start_pos_y')) / len(extruderValues('machine_extruder_start_pos_y'))" },
+        "line_width": { "value": "machine_nozzle_size * 0.875" },
+        "machine_min_cool_heat_time_window": { "value": "15" },
+        "default_material_print_temperature": { "value": "200" },
+        "material_standby_temperature": { "value": "100" },
+        "multiple_mesh_overlap": { "value": "0" },
+        "prime_tower_enable": { "value": "True" },
+
+
+        "retraction_amount": { "value": "1" },
+        "retraction_count_max": { "value": "10" },
+        "retraction_extrusion_window": { "value": "1" },
+        "retraction_hop": { "value": "2" },
+        "retraction_hop_enabled": { "value": "extruders_enabled_count > 1"  },
+        "retraction_hop_only_when_collides": { "value": "True" },
+        "retraction_min_travel": { "value": "5" },
+        "retraction_prime_speed": { "value": "15" },
+        "skin_overlap": { "value": "10" },
+
+
+        "support_angle": { "value": "45" },
+        "support_pattern": { "value": "'triangles'" },
+        "support_use_towers": { "value": "False" },
+        "support_xy_distance": { "value": "wall_line_width_0 * 2.5" },
+        "support_xy_distance_overhang": { "value": "wall_line_width_0" },
+        "support_z_distance": { "value": "0" }
     }
 }
