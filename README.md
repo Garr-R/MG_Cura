@@ -1,9 +1,15 @@
 # MG_Cura
 
-## (0.50mm Nozzle) Quality/Layer Height Setting Types :
+## Quality/Layer Height Setting Types :
 
-|  Ultra  | Super  | Dynamic | Standard | Low    | Draft  |
+|  Ultra  | Super  | Adaptive | Standard | Low    | Draft  |
 | ------- | ------ | ------- | -------- | ------ | ------ |
-| 0.08mm  | 0.12mm | 0.16mm  | 0.2mm    | 0.28mm | 0.32mm |
+| 0.06mm  | 0.1mm | 0.15mm  | 0.2mm    | 0.3mm | 0.4mm |
 
-We'll probably want different layer height settings for each Nozzle Size.
+## First Layer Height Value :
+
+|  Ultra  | Super  | Adaptive | Standard | Low    | Draft  |
+| ------- | ------ | ------- | -------- | ------ | ------ |
+| 0.05mm  | 0.08mm | 0.12mm  | 0.16mm    | 0.24mm | 0.32mm |
+
+![Quality Settings](https://github.com/Garr-R/MG_Cura/blob/master/Quality%20Settings.png)
